@@ -1,0 +1,266 @@
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap");
+
+:root {
+  /* btn and hover colors */
+  --ios-btn: hsl(171, 66%, 44%);
+  --mac-btn: hsl(233, 100%, 69%);
+
+  /* headings and paragraphs colors */
+  --hdg-clr: hsl(210, 10%, 33%);
+  --pgph-clr: hsl(201, 11%, 66%);
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  vertical-align: middle;
+}
+
+/*
+    ======================
+    Resets 
+    ======================
+*/
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.8em;
+}
+
+h3 {
+  font-size: 1.6em;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 600;
+  color: var(--hdg-clr);
+  margin-bottom: 24px;
+  line-height: 1.2;
+}
+
+p {
+  color: var(--pgph-clr);
+  margin-bottom: 30px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  color: var(--ios-btn);
+}
+
+body {
+  font: 400 18px/26px "Bai Jamjuree", sans-serif;
+  text-align: center;
+  background: url(images/bg-header-mobile.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+/* 
+    ===================
+    main styles 
+    ===================
+*/
+.main-header img {
+  margin-bottom: 60px;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.snippets img,
+.access-clipboard img {
+  width: 100%;
+}
+
+.workflow-logos img {
+  width: 30%;
+  margin: 40px;
+}
+
+.workflow div:first-of-type img {
+  margin-bottom: 20px;
+}
+
+.workflow .logos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 60px 0;
+}
+
+/*
+   =====================
+    buttons
+   =====================
+*/
+.btn {
+  font-weight: 600;
+  display: block;
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 24px;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 50px;
+}
+
+.ios-btn {
+  background-color: var(--ios-btn);
+  border-bottom: 4px solid hsl(156, 95%, 29%);
+  box-shadow: 0 10px 14px hsl(171, 81%, 29%, 0.275);
+}
+
+.mac-btn {
+  background-color: var(--mac-btn);
+  border-bottom: 4px solid hsl(233, 88%, 54%);
+  box-shadow: 0 10px 14px hsl(233, 88%, 54%, 0.275);
+}
+
+.btn:hover {
+  opacity: 0.7;
+}
+
+/* 
+    =======================
+    footer
+    =======================
+*/
+.main-footer {
+  background-color: #eee;
+}
+
+.main-footer img {
+  width: 50px;
+  margin-bottom: 30px;
+}
+
+.main-footer .social-icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.main-footer .social-icons .fab {
+  font-size: 2em;
+}
+
+/* 
+    =================================
+    Laptops and desktops design
+    =================================
+*/
+@media (min-width: 960px) {
+  body {
+    background: url(images/bg-header-desktop.png);
+    background-repeat: no-repeat;
+    font-size: 20px;
+  }
+
+  .main-header {
+    padding: 0 20px;
+  }
+
+  .container {
+    width: 80vw;
+    padding: 80px 40px;
+  }
+
+  .btn {
+    display: inline-block;
+    width: 40%;
+    margin: 20px;
+  }
+
+  .snippets {
+    position: relative;
+  }
+
+  .snippets .flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    width: 30%;
+    position: absolute;
+    left: 80%;
+    top: 20%;
+  }
+
+  .snippets img {
+    position: relative;
+    right: 30%;
+    top: 30px;
+  }
+
+  .access-clipboard {
+    margin-top: 20%;
+  }
+
+  .workflow-info {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 80px;
+  }
+
+  .workflow-info img {
+    width: 40px;
+  }
+
+  .workflow-info div {
+    width: 33.33%;
+  }
+
+  .workflow-logos {
+    display: inline-block;
+    margin: 30px 0;
+  }
+  .workflow-logos img {
+    width: 10%;
+  }
+
+  .main-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 20px 40px;
+  }
+
+  .main-footer img {
+    justify-self: end;
+  }
+
+  .main-footer .guidelines {
+    justify-self: start;
+    text-align: left;
+  }
+
+  .main-footer .guidelines p {
+    display: inline-block;
+    width: 25%;
+    white-space: nowrap;
+  }
+
+  .main-footer .social-icons .fab {
+    margin-right: 30px;
+  }
+}
